@@ -10,10 +10,11 @@ public class WaypointsNavigator : MonoBehaviour
     private float _speed; 
     private bool _isCircleMovement;
 
-    public void Update()
+    private void Update()
     {
         var currentWaypoint = _waypoint[_currentWaypointIndex];
-        transform.position = Vector2.MoveTowards(transform.position, currentWaypoint.position, _speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, 
+            currentWaypoint.position, _speed * Time.deltaTime);
         
         if (Vector2.Distance(transform.position,currentWaypoint.position) < 0.1)
             SwitchWaypoint();

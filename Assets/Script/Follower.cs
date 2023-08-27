@@ -31,7 +31,5 @@ public class Follower : MonoBehaviour
     private void FollowTarget()
     {
         _coroutine = StartCoroutine(_targetFollower.MoveToTarget());
-    }
-
-    
+    }    
 }

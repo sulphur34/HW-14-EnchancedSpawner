@@ -12,13 +12,13 @@ public class TargetFollower : MonoBehaviour
         _target = target;
         _speed = speed;
     }
-
-    
+        
     public IEnumerator MoveToTarget()
     {
         while (_target.position != transform.position)
         {
-            transform.position = Vector2.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, 
+                _target.position, _speed * Time.deltaTime);
             yield return null;
         }
     }

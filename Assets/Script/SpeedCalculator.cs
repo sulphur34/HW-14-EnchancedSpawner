@@ -10,13 +10,13 @@ public class SpeedCalculator : MonoBehaviour
     public float SpeedX => _speedX;
     public float SpeedY => _speedY;
 
-    void Start()
+    private void Start()
     {
         _lastPosition = transform.position;
         _animatorCoefficient = 10000;
     }
 
-    void Update()
+    private void Update()
     {
         var _currentPosition = _lastPosition - transform.position;
         _lastPosition = transform.position;

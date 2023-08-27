@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -15,7 +14,7 @@ public class AnimationHandler : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private SpeedCalculator _speedCalculator;
 
-    void Start()
+    private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
@@ -24,7 +23,7 @@ public class AnimationHandler : MonoBehaviour
         _verticalMovementID = Animator.StringToHash(VerticalMovement);
     }
 
-    void Update()
+    private void Update()
     {
         if (_speedCalculator.SpeedX < 0)
             _spriteRenderer.flipX = false;
